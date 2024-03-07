@@ -75,8 +75,9 @@ def clf_rf_class(dataX, dataY, tsize, rstate):
     return (best_score, total_tree, clfRFR)
 
 # Load datasets
-floadDt1 = 'https://raw.githubusercontent.com/stellavirginiaa/projects_stella/dataset/master/dataset_pakfelik.xlsx'
-floadDt2 = 'https://raw.githubusercontent.com/stellavirginiaa/projects_stella/dataset/master/dataset_tambahan.xlsx'
+floadDt1 = pd.read_excel('https://raw.githubusercontent.com/stellavirginiaa/projects_stella/dataset/master/dataset_pakfelik.xlsx')
+floadDt2 = pd.read_excel('https://raw.githubusercontent.com/stellavirginiaa/projects_stella/dataset/master/dataset_tambahan.xlsx')
+
 
 status_map = {'phishing': 1, 'legitimate': 0}
 floadDt1['status'] = floadDt1['status'].map(status_map)
